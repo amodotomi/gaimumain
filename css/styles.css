@@ -1,0 +1,173 @@
+@import url('./confetti.css');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(-45deg, #ee5252c5, #e73c7ee9, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.header__items {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-man {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-right: 10px;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+}
+
+
+.game-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.container {
+    max-width: 1250px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+
+.header__title {
+    padding-top: 5px;
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+    font-size: 0.7rem;
+    
+}
+
+.game-section__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-menu__title {
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.game-menu__difficult-btn,
+.restart-btn {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background:#00ffef3b;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.game-menu__difficult-btn:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.game-menu__difficult-btn,
+.restart-btn {
+    padding: 15px 20px;
+    background:#00ffef3b;
+    border-radius: 6px;
+}
+
+.restart-btn:hover {
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.game-menu__difficult-btn:hover {
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.game-table {
+    max-width: 600px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.game-card {
+    width: 50px;
+    height: 100px;
+    flex: 0 0 23%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(101, 0, 183, 0.618);
+    border-radius: 5px;
+    transition: all 0.2s linear;
+    margin: 1%;
+}
+
+.game-card i {
+    font-size: 40px;
+    display: none;
+}
+
+.game-card i+i {
+    display: block;
+}
+
+.game-card.flip {
+    background: #ff00807c !important;
+    transform: perspective(100px) rotateY(180deg);
+}
+
+.game-card.flip i {
+    display: block;
+}
+
+.game-card.flip i+i {
+    display: none;
+}
+
+.game-card.successfully {
+    background: #51ff657f !important;
+}
+
+.game-card:hover {
+    background: #ffffff95;
+}
